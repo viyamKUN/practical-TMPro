@@ -8,7 +8,7 @@ namespace Yurei.PTMP.StaticData
     {
         private const string DIC_TEXT_DIRECTROY = "WordDictionary";
         private static Dictionary<string, Word> _wordDictionary;
-        private static Word _defaultWord = new Word("", "[ ]", "");
+        private static Word _defaultWord = new Word("", "[  ]", "");
 
         public static void LoadData()
         {
