@@ -28,7 +28,7 @@ namespace Yurei.PTMP.UI
         {
             var materialType = targetType.ToUpper();
             var material = _fontMaterials.Find(x => x.type.ToString().Equals(materialType)).material;
-            _targetText.material = material;
+            _targetText.fontMaterial = material;
         }
     }
 }
