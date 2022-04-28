@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 32, y: 0}
   m_SizeDelta: {x: 0, y: 80}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &67294182
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Practical TMPro
+  m_text: <sprite name="disk">Practical TMPro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 799eb13c947ed404f9c870dd07c6c71b, type: 2}
   m_sharedMaterial: {fileID: -3169275212568360102, guid: 799eb13c947ed404f9c870dd07c6c71b, type: 2}
