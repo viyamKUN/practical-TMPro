@@ -24,15 +24,19 @@ namespace Yurei.PTMP
                 }
                 var linkInfo = _targetText.textInfo.linkInfo[clickedLinkIndex];
                 var linkID = linkInfo.GetLinkID();
-                var word = StaticData.WordDictionary.GetWord(linkID);
-                _gameManager.UpdateLinkInfoBox(word);
+                UpdateLinkInfoBox(linkID);
             }
         }
 
         private void SetEmptyLinkInfoBox()
         {
-            // Get Default Word Object
-            var word = StaticData.WordDictionary.GetWord(string.Empty);
+            // Default Word Object
+            UpdateLinkInfoBox(string.Empty);
+        }
+
+        private void UpdateLinkInfoBox(string uid)
+        {
+            var word = StaticData.WordDictionary.GetWord(uid);
             _gameManager.UpdateLinkInfoBox(word);
         }
     }
