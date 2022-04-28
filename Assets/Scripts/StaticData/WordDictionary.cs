@@ -8,7 +8,7 @@ namespace Yurei.PTMP.StaticData
     {
         private const string DIC_TEXT_DIRECTROY = "WordDictionary";
         private static Dictionary<string, Word> _wordDictionary;
-        private static Word _defaultWord = new Word("UNKNOWN", "단어사전", "단어에 대한 설명을 제공합니다.");
+        private static Word _defaultWord = new Word("", "[ ]", "");
 
         public static void LoadData()
         {
@@ -27,7 +27,7 @@ namespace Yurei.PTMP.StaticData
 
         public static Word GetWord(string uid)
         {
-            if (!_wordDictionary.ContainsKey(uid))
+            if (string.IsNullOrEmpty(uid) || !_wordDictionary.ContainsKey(uid))
             {
                 return _defaultWord;
             }
