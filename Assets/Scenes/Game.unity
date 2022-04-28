@@ -569,7 +569,6 @@ GameObject:
   - component: {fileID: 408166188}
   - component: {fileID: 408166190}
   - component: {fileID: 408166189}
-  - component: {fileID: 408166191}
   m_Layer: 5
   m_Name: LinkInfoTextBox
   m_TagString: Untagged
@@ -636,20 +635,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408166187}
   m_CullTransparentMesh: 1
---- !u!114 &408166191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408166187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 762e749932d9044599496f56a79dca43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _wordText: {fileID: 1134704432}
-  _descText: {fileID: 575054969}
 --- !u!1 &501449261
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e285cddd090d64bc78582c178900447f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _linkInfoBoxManager: {fileID: 408166191}
+  _linkInfoBoxManager: {fileID: 1051675305}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +908,7 @@ GameObject:
   - component: {fileID: 534488455}
   - component: {fileID: 534488454}
   m_Layer: 5
-  m_Name: LinkText
+  m_Name: MaterialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -968,8 +953,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC774\uB984\uC744 \uBB50\uB77C\uACE0 \uC9D3\uC9C0?\n\uADF8\uB798, <b>\uD53C\uB178\uD0A4\uC624</b>\uAC00
-    \uC88B\uACA0\uC5B4!\n\uD589\uC6B4\uC744 \uAC00\uC838\uC62C \uC774\uB984\uC774\uC57C."
+  m_text: "\uADF8\uB798, <b>\uD53C\uB178\uD0A4\uC624</b>\uAC00 \uC88B\uACA0\uC5B4!
+    \uD589\uC6B4\uC744 \uAC00\uC838\uC62C \uC774\uB984\uC774\uC57C."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 681dd919b81374839aea0828bddb43f4, type: 2}
   m_sharedMaterial: {fileID: 6782841884909666346, guid: 681dd919b81374839aea0828bddb43f4, type: 2}
@@ -978,8 +963,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283455582
-  m_fontColor: {r: 0.36862746, g: 0.3437647, b: 0.3137255, a: 1}
+    rgba: 4289903038
+  m_fontColor: {r: 0.745283, g: 0.72569674, b: 0.6995817, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -996,14 +981,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1058,7 +1043,7 @@ GameObject:
   - component: {fileID: 575054970}
   - component: {fileID: 575054969}
   m_Layer: 5
-  m_Name: Text
+  m_Name: DescText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1262,7 +1247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 607809787}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1632293642}
+        m_TargetAssemblyTypeName: Yurei.PTMP.UI.MaterialInfoBoxManager, Assembly-CSharp
+        m_MethodName: ChangeMaterial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GLOW
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &607809787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,7 +1380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723800274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1632293642}
+        m_TargetAssemblyTypeName: Yurei.PTMP.UI.MaterialInfoBoxManager, Assembly-CSharp
+        m_MethodName: ChangeMaterial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TEXTURE
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &723800274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,7 +1647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 885277669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1632293642}
+        m_TargetAssemblyTypeName: Yurei.PTMP.UI.MaterialInfoBoxManager, Assembly-CSharp
+        m_MethodName: ChangeMaterial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OUTLINE
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &885277669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,6 +1707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1051675304}
+  - component: {fileID: 1051675305}
   m_Layer: 5
   m_Name: LinkInfo
   m_TagString: Untagged
@@ -1714,6 +1736,20 @@ RectTransform:
   m_AnchoredPosition: {x: 100, y: -200}
   m_SizeDelta: {x: 800, y: 620}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1051675305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051675303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762e749932d9044599496f56a79dca43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wordText: {fileID: 1134704432}
+  _descText: {fileID: 575054969}
 --- !u!1 &1096701564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1914,7 @@ GameObject:
   - component: {fileID: 1134704433}
   - component: {fileID: 1134704432}
   m_Layer: 5
-  m_Name: ClickedTextName
+  m_Name: WordText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2282,7 +2318,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1341749444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1632293642}
+        m_TargetAssemblyTypeName: Yurei.PTMP.UI.MaterialInfoBoxManager, Assembly-CSharp
+        m_MethodName: ChangeMaterial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BASE
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1341749444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2464,6 +2512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1632293641}
+  - component: {fileID: 1632293642}
   m_Layer: 5
   m_Name: MaterialInfo
   m_TagString: Untagged
@@ -2492,6 +2541,28 @@ RectTransform:
   m_AnchoredPosition: {x: 942.4, y: -200}
   m_SizeDelta: {x: 800, y: 620}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1632293642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632293640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97c229ea0bc74639ad514d5381a5f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetText: {fileID: 534488454}
+  _fontMaterials:
+  - type: 0
+    material: {fileID: 6782841884909666346, guid: 681dd919b81374839aea0828bddb43f4, type: 2}
+  - type: 1
+    material: {fileID: 2100000, guid: 5ff72d5431ea34d0aa3ff02c3a89a449, type: 2}
+  - type: 2
+    material: {fileID: 2100000, guid: 648c28141609c4094a3fd422d120ea9d, type: 2}
+  - type: 3
+    material: {fileID: 2100000, guid: 9bfc3c35fd98b4a8587ce5421d1a80fc, type: 2}
 --- !u!1 &1778708651
 GameObject:
   m_ObjectHideFlags: 0
